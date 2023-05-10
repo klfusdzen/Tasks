@@ -50,7 +50,7 @@ public class TaskArrays {
 
     //Создайте массив из 15 случайных целых чисел из отрезка [0;9]. Выведите массив на экран.
     // Подсчитайте сколько в массиве чётных элементов и выведете это количество на экран на отдельной строке.
-    public static void main(String[] args) {
+    /* public static void main(String[] args) {
         int b = 0;
         int[] Array = new int[15];
         for (int i = 0; i < Array.length; i++) {
@@ -61,5 +61,21 @@ public class TaskArrays {
         }
         System.out.println(" ");
         System.out.println("Всего в массиве " + b + " четных числа(ел)");
+    } */
+
+    //Создайте массив из 8 случайных целых чисел из отрезка [1;10]. Выведите массив на экран в строку.
+    // Замените каждый элемент с нечётным индексом на ноль. Снова выведете массив на экран на отдельной строке.
+    public static void main(String[] args) {
+        int b = 0;
+        int[] Array = new int[8];
+        for (int i = 0; i < Array.length; i++) {
+            Array[i] = (int) (Math.random() * 9 + 1);
+            System.out.print(Array[i] + " ");
+        }
+        System.out.println(" ");
+        for (int i = 0; i < Array.length; i++) {
+            if (Array[i] % 2 != 0) Array[i] = 0;
+            System.out.print(Array[i] + " ");
+        }
     }
 }
