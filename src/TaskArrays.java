@@ -65,7 +65,7 @@ public class TaskArrays {
 
     //Создайте массив из 8 случайных целых чисел из отрезка [1;10]. Выведите массив на экран в строку.
     // Замените каждый элемент с нечётным индексом на ноль. Снова выведете массив на экран на отдельной строке.
-    public static void main(String[] args) {
+    /* public static void main(String[] args) {
         int b = 0;
         int[] Array = new int[8];
         for (int i = 0; i < Array.length; i++) {
@@ -76,6 +76,39 @@ public class TaskArrays {
         for (int i = 0; i < Array.length; i++) {
             if (Array[i] % 2 != 0) Array[i] = 0;
             System.out.print(Array[i] + " ");
+        }
+    } */
+
+    //Создайте 2 массива из 5 случайных целых чисел из отрезка [0;5] каждый,
+    // выведите массивы на экран в двух отдельных строках.
+    // Посчитайте среднее арифметическое элементов каждого массива и сообщите,
+    // для какого из массивов это значение оказалось больше (либо сообщите, что их средние арифметические равны).
+    public static void main(String[] args) {
+        int sum1 = 0;
+        int sum2 = 0;
+        int[] Array1 = new int[5];
+        System.out.println("1 массив:");
+        for (int i = 0; i < Array1.length; i++) {
+            Array1[i] = (int) (Math.random() * 6);
+            System.out.print(Array1[i] + " ");
+            sum1 += (int) Array1[i] / Array1.length;
+        }
+
+        System.out.println("");
+        System.out.println("2 массив:");
+        int[] Array2 = new int[5];
+        for (int i = 0; i < Array2.length; i++) {
+            Array2[i] = (int) (Math.random() * 6);
+            System.out.print(Array2[i] + " ");
+            sum2 += (int) Array2[i] / Array2.length;
+        }
+
+        System.out.println("");
+        if (sum1 == sum2) System.out.println("Средние арифметические значения двух массивов равны");
+        else {
+            if (sum1 > sum2)
+                System.out.println("Среднее арифметическое значение первого массива больше");
+            else System.out.println("Среднее арифметическое значение второго массива больше");
         }
     }
 }
