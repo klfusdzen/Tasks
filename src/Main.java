@@ -45,9 +45,16 @@ public class Main {
     } */
 
     //Создайте программу, выводящую на экран первые 20 элементов последовательности 2 4 8 16 32 64 128 ….
-    public static void main(String[] args) {
+    /* public static void main(String[] args) {
         for (int i = 1, j = 2; i <= 20; i++, j *= 2){
             System.out.print(j + " ");
+        }
+    } */
+
+    //Выведите на экран все члены последовательности 2an-1–1, где a1=2, которые меньше 10000
+    public static void main(String[] args) {
+        for (int a = 2; a < 10000; a = 2 * a - 1) {
+            System.out.print(a + " ");
         }
     }
 }
