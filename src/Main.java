@@ -24,7 +24,7 @@ public class Main {
     } */
 
     //Для введённого пользователем с клавиатуры натурального числа посчитайте сумму всех его цифр (заранее не известно сколько цифр будет в числе).
-    public static void main(String[] args) {
+    /*  public static void main(String[] args) {
         System.out.println("Введите число");
         Scanner scanner = new Scanner(System.in);
         int sum = 0;
@@ -34,5 +34,12 @@ public class Main {
             input /= 10;
         }
         System.out.println("Сумма всех чисел введенного числа равна " + sum);
+    } */
+
+    //Создайте программу, выводящую на экран первые 55 элементов последовательности 1 3 5 7 9 11 13 15 17 ….
+    public static void main(String[] args) {
+        for (int i = 1, j = 1; i <= 55; i++, j += 2) {
+            System.out.print(j + " ");
+        }
     }
 }
